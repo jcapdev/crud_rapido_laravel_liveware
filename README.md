@@ -62,3 +62,93 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+### CRUD RAPIDO DE 15 MINS con Livewire Crud Generator
+### livewire laravel
+##  tecnologias
+##  laravel 8
+##  Livewire Crud Generator
+
+
+
+## iNSTALL LARAVEL
+    composer create-project laravel/laravel example_liveware 8.6 --prefer-dist
+
+## crear tabla de empleados
+ 	php artisan make:migration create_empleados_table
+
+## add archivo migrate empleados
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class Empleados extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('empleados', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');  // add
+            $table->string('correo');  // add
+            $table->timestamps();
+        }); 
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('empleados');
+    }
+}
+
+
+## migrar
+
+  php artisan migrate
+
+## add Livewire Crud Generator
+
+  composer require flightsadmin/livewire-crud
+	
+## install 
+
+   php artisan crud:install
+
+## generar tabla , se debe colocar el nombre de la tabla en la base de datos
+
+   php artisan crud:generate empleados
+
+## verificar servidor
+
+   php artisan serve
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
