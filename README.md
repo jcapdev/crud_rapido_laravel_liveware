@@ -76,6 +76,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## iNSTALL LARAVEL
     composer create-project laravel/laravel example_liveware 8.6 --prefer-dist
 
+## Configurar variables de entorno .env
+    
+
 ## crear tabla de empleados
  	php artisan make:migration create_empleados_table
 
